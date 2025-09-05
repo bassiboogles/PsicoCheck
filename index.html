@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PsicoCheck — Inicio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="i18n.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header class="header">  <div class="container">    <div class="nav">      <a href="index.html" class="brand" aria-label="PsicoCheck">        <img src="assets/logo.svg" alt="logo"/><span data-i18n="brand">PsicoCheck</span>      </a>      <nav id="menu" class="menu" aria-label="Main navigation">        <a href="index.html" data-active class="active" data-i18n="menu.home">Inicio</a>        <a href="quienes.html" data-active class="" data-i18n="menu.about">Quiénes somos</a>        <a href="buscador.html" data-active class="" data-i18n="menu.search">Busca a tu psicólogo</a>        <a href="directorio.html" data-active class="" data-i18n="menu.directory">Directorio verificado</a>        <a href="guia.html" data-active class="" data-i18n="menu.guide">Guía para pacientes</a>        <a href="recursos.html" data-active class="" data-i18n="menu.resources">Recursos</a>        <a href="contacto.html" data-active class="" data-i18n="menu.contact">Contacto</a>      </nav>      <div class="flex gap-2">        <button class="btn" onclick="PC.toggleLang()">ES/EN</button>        <button class="btn" onclick="PC.toggleTheme()">☾/☀</button>        <a href="reporta.html" class="btn-primary" data-i18n="menu.report">Reporta</a>        <button id="btn-menu" class="hamburger btn" aria-label="Abrir menú">☰</button>      </div>    </div>  </div></header>
+<main>
+  <section class="section">
+    <div class="container grid grid-2">
+      <div class="prose">
+        <h1 data-i18n="introTitle">La importancia de acudir con un psicólogo certificado</h1>
+        <p data-i18n="introBody">Una cédula profesional valida estudios y responsabilidad legal; la formación específica asegura prácticas basadas en evidencia.</p>
+        <div class="grid" style="grid-template-columns:auto auto; gap:.7rem; margin-top:1rem">
+          <a class="btn" href="buscador.html" data-i18n="heroCTA1">Buscar ahora</a>
+          <a class="btn" href="guia.html" data-i18n="heroCTA2">Cómo verificar</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="cedTitle">¿Qué es la cédula profesional y por qué importa?</h2>
+        <p data-i18n="cedP1">La cédula profesional es un documento oficial emitido por la SEP...</p>
+        <ul class="prose">
+          <li>Verifica estudios y título universitario.</li>
+          <li>Fomenta prácticas basadas en evidencia.</li>
+          <li>Brinda respaldo legal y profesional.</li>
+          <li>Protege tu privacidad y seguridad.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container section">
+    <div class="grid grid-3">
+      <div>
+        <h3 class="prose" data-i18n="brand">PsicoCheck</h3>
+        <p class="small prose" data-i18n="legal">Este sitio es informativo; no brinda asesoría médica ni legal y no sustituye la atención profesional. Para emergencias llama al 911 o a la Línea de la Vida (800 911 2000).</p>
+      </div>
+      <div>
+        <h4>Menú</h4>
+        <nav class="small grid">
+          <a href="quienes.html" data-i18n="menu.about">Quiénes somos</a>
+          <a href="buscador.html" data-i18n="menu.search">Busca</a>
+          <a href="directorio.html" data-i18n="menu.directory">Directorio</a>
+          <a href="recursos.html" data-i18n="menu.resources">Recursos</a>
+        </nav>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <div class="small grid">
+          <a href="#">Aviso de Privacidad</a>
+          <a href="#">Términos de Uso</a>
+          <a href="#">Política editorial y correcciones</a>
+        </div>
+      </div>
+    </div>
+    <div class="small" style="margin-top:1rem">© <span id="year"></span> PsicoCheck</div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
+</body>
+</html>
